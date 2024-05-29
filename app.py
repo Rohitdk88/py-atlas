@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 # MongoDB connection
 client = MongoClient(os.getenv('MONGODB_URI'))
-db = client['sample_airbnb']  # Replace with your database name
+db = client['Sampledb']  # Replace with your database name
 
-@app.route('/fetch-data/listingsAndReviews', methods=['GET'])
+@app.route('/fetch-data/samplecollection', methods=['GET'])
 def fetch_data(collection_name):
     # Access the specified collection
     collection = db[collection_name]
