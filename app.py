@@ -9,9 +9,9 @@ client = MongoClient(os.getenv('MONGODB_URI'))
 db = client['recruitmentdb1']  # Replace with your database name
 
 @app.route('/fetch-data/questions', methods=['GET'])
-def fetch_data(collection_name):
+def fetch_data(questions):
     # Access the specified collection
-    collection = db[collection_name]
+    collection = db[questions]
 
     # Example filter, you can modify this based on your requirements
     filter_criteria = request.args.get('filter', {})
